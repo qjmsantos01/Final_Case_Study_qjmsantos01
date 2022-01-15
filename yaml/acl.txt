@@ -1,0 +1,271 @@
+2022-01-15T11:32:33: %UNICON-WARNING: [33mDevice 'CSR1kv' connection 'cli' does not have IP and/or port specified, ignoring[0m[39m
+{
+  "test": {
+    "aces": {
+      "10": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 192.168.56.101": {
+                  "source_network": "host 192.168.56.101"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "10"
+      },
+      "20": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 192.168.56.102": {
+                  "source_network": "host 192.168.56.102"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "20"
+      },
+      "30": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 192.168.56.103": {
+                  "source_network": "host 192.168.56.103"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "30"
+      },
+      "40": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 192.168.56.104": {
+                  "source_network": "host 192.168.56.104"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "40"
+      },
+      "50": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 192.168.56.105": {
+                  "source_network": "host 192.168.56.105"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "50"
+      },
+      "60": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 192.168.56.106": {
+                  "source_network": "host 192.168.56.106"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "60"
+      },
+      "70": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 10.0.0.1": {
+                  "source_network": "host 10.0.0.1"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "70"
+      },
+      "80": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 10.0.1.1": {
+                  "source_network": "host 10.0.1.1"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "80"
+      },
+      "90": {
+        "actions": {
+          "forwarding": "permit",
+          "logging": "log-none"
+        },
+        "matches": {
+          "l3": {
+            "ipv4": {
+              "destination_network": {
+                "any": {
+                  "destination_network": "any"
+                }
+              },
+              "protocol": "ipv4",
+              "source_network": {
+                "host 10.201.96.0": {
+                  "source_network": "host 10.201.96.0"
+                }
+              }
+            }
+          },
+          "l4": {
+            "ipv4": {
+              "established": false
+            }
+          }
+        },
+        "name": "90"
+      }
+    },
+    "name": "test",
+    "type": "ipv4-acl-type"
+  }
+}
+

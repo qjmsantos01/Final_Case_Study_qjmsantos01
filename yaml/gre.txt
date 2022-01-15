@@ -1,0 +1,126 @@
+2022-01-15T11:29:05: %UNICON-WARNING: [33mDevice 'CSR1kv' connection 'cli' does not have IP and/or port specified, ignoring[0m[39m
+{
+  "GigabitEthernet1": {
+    "address_determined_by": "DHCP",
+    "bgp_policy_mapping": false,
+    "directed_broadcast_forwarding": false,
+    "enabled": true,
+    "icmp": {
+      "mask_replies": "never sent",
+      "redirects": "always sent",
+      "unreachables": "always sent"
+    },
+    "input_features": [
+      "MCI Check"
+    ],
+    "ip_access_violation_accounting": false,
+    "ip_cef_switching": true,
+    "ip_cef_switching_turbo_vector": true,
+    "ip_fast_switching": true,
+    "ip_flow_switching": false,
+    "ip_multicast_distributed_fast_switching": false,
+    "ip_multicast_fast_switching": true,
+    "ip_null_turbo_vector": true,
+    "ip_output_packet_accounting": false,
+    "ip_route_cache_flags": [
+      "CEF",
+      "Fast"
+    ],
+    "ipv4": {
+      "192.168.56.101/24": {
+        "broadcast_address": "255.255.255.255",
+        "ip": "192.168.56.101",
+        "prefix_length": "24",
+        "secondary": false
+      }
+    },
+    "local_proxy_arp": false,
+    "mtu": 1500,
+    "multicast_groups": [
+      "224.0.0.5",
+      "224.0.0.6"
+    ],
+    "network_address_translation": false,
+    "oper_status": "up",
+    "policy_routing": false,
+    "probe_proxy_name_replies": false,
+    "proxy_arp": true,
+    "router_discovery": false,
+    "rtp_ip_header_compression": false,
+    "security_level": "default",
+    "split_horizon": true,
+    "tcp_ip_header_compression": false,
+    "unicast_routing_topologies": {
+      "topology": {
+        "base": {
+          "status": "up"
+        }
+      }
+    },
+    "wccp": {
+      "redirect_exclude": false,
+      "redirect_inbound": false,
+      "redirect_outbound": false
+    }
+  },
+  "Tunnel0": {
+    "address_determined_by": "non-volatile memory",
+    "bgp_policy_mapping": false,
+    "directed_broadcast_forwarding": false,
+    "enabled": true,
+    "icmp": {
+      "mask_replies": "never sent",
+      "redirects": "always sent",
+      "unreachables": "always sent"
+    },
+    "input_features": [
+      "MCI Check"
+    ],
+    "ip_access_violation_accounting": false,
+    "ip_cef_switching": true,
+    "ip_cef_switching_turbo_vector": true,
+    "ip_fast_switching": true,
+    "ip_flow_switching": false,
+    "ip_multicast_distributed_fast_switching": false,
+    "ip_multicast_fast_switching": true,
+    "ip_null_turbo_vector": true,
+    "ip_output_packet_accounting": false,
+    "ip_route_cache_flags": [
+      "CEF",
+      "Fast"
+    ],
+    "ipv4": {
+      "10.0.0.1/24": {
+        "broadcast_address": "255.255.255.255",
+        "ip": "10.0.0.1",
+        "prefix_length": "24",
+        "secondary": false
+      }
+    },
+    "local_proxy_arp": false,
+    "mtu": 1476,
+    "network_address_translation": false,
+    "oper_status": "down",
+    "policy_routing": false,
+    "probe_proxy_name_replies": false,
+    "proxy_arp": true,
+    "router_discovery": false,
+    "rtp_ip_header_compression": false,
+    "security_level": "default",
+    "split_horizon": true,
+    "tcp_ip_header_compression": false,
+    "unicast_routing_topologies": {
+      "topology": {
+        "base": {
+          "status": "up"
+        }
+      }
+    },
+    "wccp": {
+      "redirect_exclude": false,
+      "redirect_inbound": false,
+      "redirect_outbound": false
+    }
+  }
+}
+

@@ -1,0 +1,86 @@
+---
+- name: JOB APPLICATION TEST FOR ANSIBLE KNOWLEDGE
+  hosts: CSR1kv
+  gather_facts: false
+  connection: local
+
+  tasks:
+      #IMPLEMENTATION OF ACL
+    - name: Creating Description for gigabitethernet1
+      ios_config:
+        lines:
+          - permit ip host 192.168.56.101 any
+          - permit ip host 192.168.56.102 any
+          - permit ip host 192.168.56.103 any
+          - permit ip host 192.168.56.104 any
+          - permit ip host 192.168.56.105 any
+          - permit ip host 192.168.56.106 any
+          - permit ip host 10.0.0.1 any
+          - permit ip host 10.0.1.1 any
+          - permit ip host 10.201.96.0 any
+        parents: ip access-list extended test
+        save_when: modified
+      
+      #IMPLEMENTATION OF OSPF
+    - name: Creating Description for gigabitethernet1
+      ios_config:
+        lines:
+          - router-id 192.168.56.104
+        parents: router ospf 10
+        save_when: modified
+    
+    - name: different ospf for the network of the CSR1000v and DEVASC-LABVM
+      ios_config:
+        lines:
+          - router-id 1.1.1.1
+          - network 192.168.56.0 0.0.0.255 area 0
+        parents: router ospf 1
+        save_when: modified
+
+      #IMPLEMENTATION OF GRE
+    - name: creating GRE for gigabitethernet1
+      ios_config:
+        lines:
+          - 'ip address 10.0.0.1 255.255.255.0'
+          - 'tunnel source GigabitEthernet1'
+          - 'tunnel destination 10.0.1.1'
+          - 'tunnel mode gre ip'
+        parents: interface Tunnel 0
+        save_when: modified
+
+      #IMPLEMENTATION OF EIGRP
+    - name: creating EIGRP for CSR1000v
+      ios_config:
+        lines:
+          - network 10.201.96.0 0.0.15.255
+          - no auto-summary
+        parents: router eigrp 1
+        save_when: modified
+
+      #PING TESTING ONLY
+    - name: Test Ping for 192.168.56.101
+      ios_ping:
+        dest: 192.168.56.101  
+
+    - name: Test Ping for 192.168.56.102  
+      ios_ping:
+        dest: 192.168.56.102 
+
+    - name: Test Ping for 192.168.56.103  
+      ios_ping:
+        dest: 192.168.56.103
+      
+      
+      #Only for checking the configuration if the codes implemented
+    - name: Show all configuration for checking
+      ios_command:
+        commands:
+          - show run
+      register: output
+
+      #CREATING BACKUPS    
+    - name: Save the output of ipv6 addresses to a file
+      copy:
+        content: "{{ output.stdout[0] }}"
+        dest: "backups/show_backups_{{ inventory_hostname }}.txt"
+
